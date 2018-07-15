@@ -1,9 +1,12 @@
 # Data Visualization Project
 # Reproducing the  plots shown in The Economist article using ggplot2
 library(ggplot2)
+# Author: Jean Paul Uwimana
+############################
 library(data.table)
 
-df <- read.csv("Economist_Assignment_Data.csv")
+data.path <- c("C:/Users/JeanPaul/Documents/R-Course-HTML-Notes/R-Course-HTML-Notes/R-for-Data-Science-and-Machine-Learning/Training Exercises/Capstone and Data Viz Projects/Data Visualization Project/")
+df <- read.csv(paste0(data.path, "Economist_Assignment_Data.csv"))
 head(df)
 
 pl <- ggplot(df, aes(x = CPI, y = HDI)) + geom_point(aes(color = Region), shape = 1, size  = 4) 
